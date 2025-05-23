@@ -1,0 +1,137 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@300;400;500;600;700&display=swap');
+
+/* ຂໍ້ມູນທົ່ວໄປ */
+body {
+  font-family: 'Noto Sans Lao', 'Roboto', 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ຮູບແບບ Responsive */
+/* ຮູບແບບສຳລັບໂທລະສັບມືຖື */
+@media screen and (max-width: 600px) {
+  .MuiContainer-root {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  h1,
+  .MuiTypography-h1 {
+    font-size: 1.8rem !important;
+  }
+
+  h2,
+  .MuiTypography-h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3,
+  .MuiTypography-h3 {
+    font-size: 1.2rem !important;
+  }
+
+  /* ເພີ່ມພື້ນທີ່ດ້ານລຸ່ມເພື່ອໃຫ້ເນື້ອຫາບໍ່ຖືກປິດໂດຍ bottom navigation */
+  .app-container {
+    padding-bottom: 60px;
+  }
+
+  /* ຂະໜາດຕົວອັກສອນໃນຕາຕະລາງ */
+  .MuiTableCell-root {
+    padding: 8px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ຮູບແບບສຳລັບແທັບເລັດ */
+@media screen and (min-width: 601px) and (max-width: 960px) {
+
+  h1,
+  .MuiTypography-h1 {
+    font-size: 2.2rem !important;
+  }
+
+  h2,
+  .MuiTypography-h2 {
+    font-size: 1.8rem !important;
+  }
+
+  h3,
+  .MuiTypography-h3 {
+    font-size: 1.4rem !important;
+  }
+
+  /* ຂະໜາດຕົວອັກສອນໃນຕາຕະລາງ */
+  .MuiTableCell-root {
+    padding: 12px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ຮູບແບບສຳລັບການເລື່ອນໜ້າຈໍໃນໂທລະສັບມືຖື */
+@media screen and (max-width: 600px) {
+
+  /* ເພື່ອໃຫ້ຕາຕະລາງສາມາດເລື່ອນໄດ້ທາງນອນ */
+  .MuiTableContainer-root {
+    overflow-x: auto;
+  }
+
+  /* ລຶບການຫຍໍ້ຕົວອັກສອນໃນຕາຕະລາງ */
+  .MuiTableCell-root {
+    white-space: nowrap;
+  }
+}
+
+/* ລັກສະນະພິເສດສຳລັບຄວາມເປັນລະບຽບ */
+.MuiCard-root {
+  transition: all 0.3s ease;
+}
+
+.MuiCard-root:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ເວັບໝາຍສຳລັບການພິມ */
+@media print {
+
+  button,
+  .MuiToolbar-root,
+  .MuiTabs-root,
+  .MuiBottomNavigation-root {
+    display: none !important;
+  }
+
+  body {
+    padding: 0;
+    background-color: white;
+  }
+
+  .MuiPaper-root {
+    box-shadow: none !important;
+  }
+
+  .MuiContainer-root {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  @page {
+    margin: 1cm;
+  }
+
+  /* ຮັບປະກັນວ່າທຸກເນື້ອຫາຈະສະແດງເຕັມທີ່ */
+  .MuiCollapse-root {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* ບໍ່ຕັດເນື້ອຫາລະຫວ່າງໜ້າ */
+  tr,
+  .MuiCard-root,
+  .MuiPaper-root {
+    page-break-inside: avoid;
+  }
+}
